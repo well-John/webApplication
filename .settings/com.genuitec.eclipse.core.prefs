@@ -1,0 +1,3 @@
+eclipse.preferences.version=1
+validator.Checked=WebRoot/js/my/easyui-validate.js,WebRoot/js/jquery/jquery-2.1.4.min.js,WebRoot/WEB-INF/web.xml,WebRoot/ckfinder/plugins/gallery/colorbox/jquery.min.js,WebRoot/js/jquery-easyUI/jquery.min.js,WebRoot/js/jquery-easyUI/locale/easyui-lang-zh_CN.js,src/service/GoodsService.java,WebRoot/js/jquery-easyUI/locale/easyui-lang-cz.js,WebRoot/js/jquery-easyUI/locale/easyui-lang-jp.js,WebRoot/js/jquery-easyUI/locale/easyui-lang-zh_TW.js
+validator.Unchecked=

@@ -1,0 +1,29 @@
+.hcenter {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+* {                  /* 清除不同浏览器的不同外边距 */
+	margin: 0;
+	padding: 0
+}
+
+.frameCenter {
+	border: 1px solid #39C;
+	margin-right: auto;
+	margin-left: auto;	
+	width:800px;	
+}
+
+.frameBody{
+	margin-right: auto;
+	margin-left: auto;
+	width:800px;
+}
+
+.frameBodyInner{
+	padding-top: 10px;
+	margin-right: auto;
+	margin-left: auto;
+	width:100px;
+}

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+
+  <welcome-file-list>
+  	<welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description>检查是否已经登录</description>
+    <servlet-name>SecurityServlet</servlet-name>
+    <servlet-class>servlet.SecurityServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>初始化系统数据</description>
+    <servlet-name>InitServlet</servlet-name>
+    <servlet-class>servlet.InitServlet</servlet-class>
+    <init-param>
+      <param-name>drv</param-name>
+      <param-value>com.mysql.jdbc.Driver</param-value>
+    </init-param>
+    <init-param>
+      <param-name>url</param-name>
+      <param-value>jdbc:mysql://localhost:3306/course</param-value>
+    </init-param>
+    <init-param>
+      <param-name>usr</param-name>
+      <param-value>root</param-value>
+    </init-param>
+    <init-param>
+      <param-name>domain</param-name>
+      <param-value>http://localhost:8080/webApplication</param-value>
+    </init-param>    
+    <init-param>
+      <param-name>pwd</param-name>
+      <param-value>admin</param-value>
+    </init-param>
+    <init-param>
+      <param-name>emailHost</param-name>
+      <param-value>smtp.163.com</param-value>
+    </init-param>
+    <init-param>
+      <param-name>emailUserEmail</param-name>
+      <param-value>llpyemao@163.com</param-value>
+    </init-param>    
+    <init-param>
+      <param-name>emailUserName</param-name>
+      <param-value>llpyemao</param-value>
+    </init-param>
+    <init-param>
+      <param-name>emailPassword</param-name>
+      <param-value>75000105llp</param-value>
+    </init-param>            
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet>
+    <description>初始化系统数据</description>
+    <servlet-name>DrawImageServlet</servlet-name>
+    <servlet-class>example.DrawImageServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>获取图形验证码</description>
+    <servlet-name>ImageCheckCodeServlet</servlet-name>
+    <servlet-class>servlet.ImageCheckCodeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>商品增删改查</description>
+    <servlet-name>GoodsServlet</servlet-name>
+    <servlet-class>servlet.GoodsServlet</servlet-class>
+  </servlet>
+  
+  
+  <servlet>
+    <servlet-name>ConnectorServlet</servlet-name>
+    <servlet-class>com.ckfinder.connector.ConnectorServlet</servlet-class>
+    <init-param>
+      <param-name>XMLConfig</param-name>
+      <param-value>/WEB-INF/ckfinder-config.xml</param-value>
+    </init-param>
+    <init-param>
+      <param-name>debug</param-name>
+      <param-value>false</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet>
+    <servlet-name>ArticleServlet</servlet-name>
+    <servlet-class>servlet.ArticleServlet</servlet-class>
+  </servlet>
+
+
+
+  <servlet-mapping>
+    <servlet-name>ConnectorServlet</servlet-name>
+    <url-pattern>
+			/ckfinder/core/connector/java/connector.java
+		</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>SecurityServlet</servlet-name>
+    <url-pattern>/servlet/SecurityServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>InitServlet</servlet-name>
+    <url-pattern>/servlet/InitServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DrawImageServlet</servlet-name>
+    <url-pattern>/servlet/DrawImageServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ImageCheckCodeServlet</servlet-name>
+    <url-pattern>/servlet/ImageCheckCodeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GoodsServlet</servlet-name>
+    <url-pattern>/servlet/GoodsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ArticleServlet</servlet-name>
+    <url-pattern>/servlet/ArticleServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+<filter>
+    <filter-name>charencode</filter-name>
+    <filter-class>filter.CharEncodingFilter</filter-class>
+  </filter>
+
+  <filter-mapping>
+   <filter-name>charencode</filter-name>
+    <url-pattern>/*</url-pattern>
+</filter-mapping>
+  
+  
+  <filter>
+    <filter-name>SecurityFilter</filter-name>
+    <filter-class>filter.SecurityFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>SecurityFilter</filter-name>
+    <url-pattern>/admin/*</url-pattern>
+  </filter-mapping>
+  
+  
+  
+  
+	<jsp-config>
+		<jsp-property-group>
+		   <display-name>JSPConfiguration</display-name>
+		   <uri-pattern>/*</uri-pattern>
+		   <el-ignored>true</el-ignored>
+		   <page-encoding>UTF-8</page-encoding>
+		   <scripting-inivalid>true</scripting-inivalid>
+		</jsp-property-group>
+	</jsp-config>  
+  
+  
+  
+  
+  
+</web-app>

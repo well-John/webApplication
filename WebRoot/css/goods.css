@@ -1,0 +1,88 @@
+@charset "utf-8";
+.goodsIcon {
+	width: 100px;
+	padding: 0px;
+}
+
+
+.clear {
+	clear: both;
+}
+
+.goodsGrid {
+	width: 515px;
+}
+
+.goodsHeader {
+	text-align: center;
+	background-color: #E0D2FD;
+	border-top-width: 2px;
+	border-bottom-width: 2px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #006;
+	border-bottom-color: #006;
+	width: 120px;
+	float: left;
+}
+
+.col {
+	text-align: center;
+	float: left;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #F00;
+	border-bottom-color: #F00;
+	vertical-align: middle;
+	height: 120px;
+	width: 120px;
+	margin: 0px;
+	line-height: 100px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.goodsEven {
+	background-color: #F1EFFE;
+}
+
+.goodsCurrentRecord {
+	background-color: #FFFFD9;
+}
+
+.floatLeft {
+	float: left;
+}
+
+.floatRight {
+	float: right;
+}
+
+.checkDiv {
+	float: left;
+	width: 30px;
+	border: 1px solid #F00;
+	text-align: center;
+}
+
+.goodsSelectedRecord {
+	background-color: #99CCCC;
+}
+
+.model {
+	z-index: 1000;
+	background-color: #CCC;
+	height: 800px;
+	width: 800px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.grid {
+	position: relative;
+	left: 0px;
+	top: 0px;	
+}

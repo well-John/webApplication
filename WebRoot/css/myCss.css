@@ -1,0 +1,12 @@
+@charset "utf-8";
+td {
+	padding: 2px;
+	border: 1px solid #39C;
+	margin: 0px;
+}
+table {
+	margin: 0px;
+	padding: 0px;
+	border: 1px solid #36C;
+	width: 800px;
+}
